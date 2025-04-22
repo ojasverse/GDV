@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      background-color: #e53935;
+      padding: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #login-form {
+      max-width: 400px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Office Login</h2>
+
+  <section id="login-form">
+    <form id="login">
+      <label>Username:
+        <input type="text" name="username" id="username" required>
+      </label>
+      <label>Password:
+        <input type="password" name="password" id="password" required>
+      </label>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('login').addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent form from reloading the page
+      
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Set your correct login credentials here
+      const correctUsername = 'admin';
+      const correctPassword = 'gyandeep123';
+
+      if (username === correctUsername && password === correctPassword) {
+        // ✅ redirect to dashboard
+        window.location.href = 'admin.html';
+      } else {
+        // ❌ show error
+        alert('Incorrect username or password.');
+      }
+    });
+  </script>
+</body>
+</html>

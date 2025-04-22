@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Result|GDV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 min-h-screen">
+  <!-- Navbar -->
+  <nav class="bg-red-600 text-yellow-300 p-4 shadow">
+    <div class="container mx-auto flex justify-between items-center flex-wrap">
+      <div class="flex items-center gap-4">
+        <img src="LOGO.jpg" alt="logo" class="w-14 rounded-full" />
+        <h1 class="text-xl font-bold">GYANDEEP VIDYALAYA</h1>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="text-3xl md:hidden focus:outline-none">☰</button>
+
+      <!-- Menu Links Desktop -->
+      <ul class="hidden md:flex gap-6 text-lg mt-4 md:mt-0 w-full md:w-auto md:items-center md:justify-end">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="result.html" class="hover:text-white">Results</a></li>
+        <li><a href="attendance.html" class="hover:text-white">Attendance</a></li>
+        <li><a href="fees.html" class="hover:text-white">Fees</a></li>
+      </ul>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden w-full mt-4 md:hidden">
+        <ul class="flex flex-col gap-3 text-lg">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="result.html" class="hover:text-white">Results</a></li>
+          <li><a href="attendance.html" class="hover:text-white">Attendance</a></li>
+          <li><a href="fees.html" class="hover:text-white">Fees</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Result Form Section -->
+  <div class="max-w-xl mx-auto bg-white p-6 mt-10 shadow-lg rounded-xl">
+    <h2 class="text-2xl font-bold mb-4 text-red-700">Enter Student Result</h2>
+    <form id="resultForm" class="space-y-4">
+      <div>
+        <label class="block font-semibold mb-1">Student Name</label>
+        <input type="text" name="studentName" required class="w-full border border-gray-300 rounded px-4 py-2" />
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Term 1 Marks</label>
+        <input type="number" name="term1" required class="w-full border border-gray-300 rounded px-4 py-2" />
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Term 2 Marks</label>
+        <input type="number" name="term2" required class="w-full border border-gray-300 rounded px-4 py-2" />
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Term 3 Marks</label>
+        <input type="number" name="term3" required class="w-full border border-gray-300 rounded px-4 py-2" />
+      </div>
+
+      <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
+        Submit Result
+      </button>
+    </form>
+
+    <div id="resultOutput" class="mt-6 p-4 border border-gray-300 rounded hidden bg-gray-100"></div>
+  </div>
+
+  <script>
+    const resultForm = document.getElementById('resultForm');
+    const resultOutput = document.getElementById('resultOutput');
+
+    resultForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(resultForm);
+      const name = formData.get('studentName');
+      const term1 = parseInt(formData.get('term1'));
+      const term2 = parseInt(formData.get('term2'));
+      const term3 = parseInt(formData.get('term3'));
+
+      const total = term1 + term2 + term3;
+      const average = total / 3;
+
+      let grade = '';
+      if (average >= 90) grade = 'A+';
+      else if (average >= 75) grade = 'A';
+      else if (average >= 60) grade = 'B';
+      else if (average >= 45) grade = 'C';
+      else grade = 'D';
+
+      resultOutput.innerHTML = `
+        <h3 class="text-lg font-bold mb-2 text-red-600">Result for ${name}</h3>
+        <p><strong>Term 1:</strong> ${term1}</p>
+        <p><strong>Term 2:</strong> ${term2}</p>
+        <p><strong>Term 3:</strong> ${term3}</p>
+        <p><strong>Total Marks:</strong> ${total}</p>
+        <p><strong>Average:</strong> ${average.toFixed(2)}</p>
+        <p><strong>Grade:</strong> <span class="font-bold text-blue-700">${grade}</span></p>
+      `;
+      resultOutput.classList.remove('hidden');
+    });
+  </script>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>

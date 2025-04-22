@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME|GDV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Navbar -->
+  <nav class="bg-red-600 text-yellow-300 p-4">
+    <div class="container mx-auto flex justify-between items-center flex-wrap">
+      <div class="flex items-center gap-4">
+        <img src="LOGO.jpg" alt="logo" class="w-14 rounded-full" />
+        <h1 class="text-xl font-bold">GYANDEEP VIDYALAYA</h1>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="text-3xl md:hidden focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Menu Links Desktop -->
+      <ul class="hidden md:flex gap-6 text-lg mt-4 md:mt-0 w-full md:w-auto md:items-center md:justify-end">
+        <li><a href="index.html" class="hover:text-white block">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="registration.html" class="hover:text-white block">Registration</a></li>
+          <li><a href="gallery.html" class="hover:text-white block">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-white block">Contact</a></li>
+          <li><a href="login.html" class="hover:text-white block">ADMIN</a></li>
+      </ul>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden w-full mt-4 md:hidden">
+        <ul class="flex flex-col gap-3 text-lg">
+          <li><a href="index.html" class="hover:text-white block">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="registration.html" class="hover:text-white block">Registration</a></li>
+          <li><a href="gallery.html" class="hover:text-white block">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-white block">Contact</a></li>
+          <li><a href="login.html" class="hover:text-white block">ADMIN</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-red-200 to-yellow-100 text-center py-20 px-4">
+    <h2 class="text-4xl font-bold mb-4">WELCOME TO GYANDEEP VIDYALAYA</h2>
+    <p class="text-lg mb-6">Empowering the future through quality education</p>
+    <a href="about.html" class="bg-red-700 text-white px-6 py-2 rounded hover:bg-yellow-800 inline-flex items-center gap-2">
+      <i class="bi bi-info-circle"></i> Learn More
+    </a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-12 px-4 bg-red-100">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="hover:scale-105 transition-transform duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Experienced Faculty</h3>
+        <p>Learn from highly qualified and dedicated teachers.</p>
+      </div>
+      <div class="hover:scale-105 transition-transform duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Modern Campus</h3>
+        <p>Equipped with the latest facilities and smart classrooms.</p>
+      </div>
+      <div class="hover:scale-105 transition-transform duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Holistic Development</h3>
+        <p>Encouraging co-curricular activities like sports, arts, and creativity alongside academics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Cards -->
+  <section class="container mx-auto py-12 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+        <img src="education.avif" alt="Education" class="rounded-t-lg w-full h-48 object-cover">
+        <div class="p-6">
+          <h5 class="text-xl font-bold mb-2">Our Mission</h5>
+          <p class="mb-4">We strive to provide quality education to help students achieve their dreams.</p>
+          <a href="about.html" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 inline-flex items-center gap-2">
+            <i class="bi bi-arrow-right-circle"></i> Learn More
+          </a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+        <img src="course.jpeg" alt="Courses" class="rounded-t-lg w-full h-48 object-cover">
+        <div class="p-6">
+          <h5 class="text-xl font-bold mb-2">Our Subjects</h5>
+          <p class="mb-4">Explore the wide variety of courses we offer to shape your future.</p>
+          <a href="courses.html" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 inline-flex items-center gap-2">
+            <i class="bi bi-book"></i> Explore Subjects
+          </a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+        <img src="LOGO.jpg" alt="Gallery" class="rounded-t-lg w-full h-48 object-cover">
+        <div class="p-6">
+          <h5 class="text-xl font-bold mb-2">Gallery</h5>
+          <p class="mb-4">View photos and videos from our events, classrooms, and more.</p>
+          <a href="gallery.html" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 inline-flex items-center gap-2">
+            <i class="bi bi-images"></i> View Gallery
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Calendar Section -->
+<section class="bg-white py-12 px-4">
+  <div class="container mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <!-- Calendar Box -->
+      <div class="bg-yellow-100 rounded-lg shadow p-6">
+        <h3 class="text-3xl font-bold mb-6 text-red-700 text-center">School Calendar</h3>
+        <div class="flex justify-between items-center mb-4">
+          <button onclick="changeMonth(-1)" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+            &larr; Prev
+          </button>
+          <h4 id="calendar-title" class="text-xl font-semibold text-red-700"></h4>
+          <button onclick="changeMonth(1)" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+            Next &rarr;
+          </button>
+        </div>
+        <div id="calendar-days" class="grid grid-cols-7 gap-2 font-semibold text-red-600 mb-2 text-center">
+          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+        <div id="calendar-grid" class="grid grid-cols-7 gap-2 text-gray-800 text-center"></div>
+      </div>
+
+      <!-- Academic Events Box -->
+      <div class="bg-yellow-50 rounded-lg shadow p-6">
+        <h3 class="text-3xl font-bold mb-6 text-center text-red-700">Academic Calendar</h3>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full border-collapse border border-gray-300 shadow-md">
+            <thead>
+              <tr class="bg-red-600 text-white">
+                <th class="px-4 py-2 border border-gray-300">Date</th>
+                <th class="px-4 py-2 border border-gray-300">Event</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-yellow-100">
+                <td class="px-4 py-2 border border-gray-300">April 2, 2025</td>
+                <td class="px-4 py-2 border border-gray-300">New Session Starts</td>
+              </tr>
+              <tr class="hover:bg-yellow-100">
+                <td class="px-4 py-2 border border-gray-300">May 15, 2025</td>
+                <td class="px-4 py-2 border border-gray-300">Summer Vacation Begins</td>
+              </tr>
+              <tr class="hover:bg-yellow-100">
+                <td class="px-4 py-2 border border-gray-300">June 12, 2025</td>
+                <td class="px-4 py-2 border border-gray-300">Classes Resume</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+  <!-- Call to Action -->
+  <section class="bg-red-200 text-center py-12 px-4">
+    <h3 class="text-3xl font-bold mb-4">Join Us Today</h3>
+    <p class="mb-6">Admissions are open for the academic year 2025-26</p>
+    <a href="registration.html" class="bg-red-700 text-white px-6 py-2 rounded hover:bg-red-800 inline-flex items-center gap-2">
+      <i class="bi bi-pencil-square"></i> Apply Now
+    </a>
+  </section>
+  <!-- Contact Section -->
+<section class="bg-gradient-to-r from-yellow-100 to-red-100 py-12 px-4">
+  <div class="container mx-auto text-center">
+    <h3 class="text-3xl font-bold mb-4 text-red-700">Have Questions?</h3>
+    <p class="mb-6 text-lg text-gray-700">Need more information or assistance? We're here to help!</p>
+    <a href="contact.html" class="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded shadow-lg hover:bg-red-700 hover:scale-105 transition transform duration-300">
+      <i class="bi bi-telephone-fill"></i>
+      Contact Us
+    </a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-red-700 text-white text-center py-4 mt-10">
+    © 2025 Gyandeep Vidyalaya. All rights reserved.
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    let today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
+  
+    const events = {
+  '2025-04-02': 'New Session Starts',
+  '2025-04-14': 'Dr. Ambedkar Jayanti',
+  '2025-04-25': 'Annual Sports Day',
+  '2025-05-01': 'Labour Day',
+  '2025-05-15': 'Summer Vacation Begins',
+  '2025-06-12': 'Classes Resume',
+  '2025-08-15': 'Independence Day',
+  '2025-09-05': 'Teachers\' Day',
+  '2025-10-02': 'Gandhi Jayanti',
+  '2025-10-24': 'Dussehra Holiday',
+  '2025-11-01': 'Diwali Celebration',
+  '2025-11-14': 'Children\'s Day',
+  '2025-12-25': 'Christmas Holiday'
+};
+
+  
+    function generateCalendar(month, year) {
+      const calendarTitle = document.getElementById('calendar-title');
+      const calendarGrid = document.getElementById('calendar-grid');
+      const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+  
+      const firstDay = new Date(year, month).getDay();
+      const numDays = new Date(year, month + 1, 0).getDate();
+  
+      calendarTitle.textContent = `${months[month]} ${year}`;
+      calendarGrid.innerHTML = '';
+  
+      for (let i = 0; i < firstDay; i++) {
+        calendarGrid.innerHTML += `<div></div>`;
+      }
+  
+      for (let day = 1; day <= numDays; day++) {
+        const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const isToday = day === today.getDate() && month === today.getMonth() && year === today.getFullYear();
+        const hasEvent = events[fullDate];
+  
+        calendarGrid.innerHTML += `
+          <div class="p-2 rounded shadow text-center cursor-pointer transition 
+            ${isToday ? 'bg-red-500 text-white font-bold' : 'bg-white hover:bg-red-200'} 
+            ${hasEvent ? 'border-2 border-red-600' : ''}" 
+            title="${hasEvent ? events[fullDate] : ''}">
+            ${day}
+          </div>`;
+      }
+    }
+  
+    function changeMonth(delta) {
+      currentMonth += delta;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      } else if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      generateCalendar(currentMonth, currentYear);
+    }
+  
+    generateCalendar(currentMonth, currentYear);
+  
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script> 
+</body>
+
+</html>

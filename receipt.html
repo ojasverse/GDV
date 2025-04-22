@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fee Receipt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .receipt {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #555;
+    }
+    .receipt p {
+      margin: 10px 0;
+    }
+    .btn-print {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .btn-print button {
+      padding: 12px 30px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-print button:hover {
+      background-color: #45a049;
+    }
+    @media print {
+      .btn-print {
+        display: none;
+      }
+      body {
+        border: none;
+        background-color: white;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex items-center justify-center gap-3 mb-4">
+    <img src="LOGO.jpg" width="100" alt="Logo" />
+    <h1 class="text-xl font-bold">GYANDEEP VIDYALAYA</h1>
+  </div>
+
+  <h2>Fee Receipt</h2>
+
+  <div class="receipt" id="receiptDetails"></div>
+
+  <div class="btn-print">
+    <button onclick="window.print()">🖨️ Download / Print</button>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const standard = urlParams.get('std');
+    const roll_number = urlParams.get('roll number');
+    const month = urlParams.get('month');
+    const amount = urlParams.get('amount');
+    const date = urlParams.get('date');
+
+    document.getElementById('receiptDetails').innerHTML = `
+      <p><strong>Student Name:</strong> ${name}</p>
+      <p><strong>Standard:</strong> ${standard}</p>
+      <p><strong>Roll Number:</strong> ${roll_number}</p>
+      <p><strong>Fee Month:</strong> ${month}</p>
+      <p><strong>Amount Paid:</strong> ₹${amount}</p>
+      <p><strong>Date of Payment:</strong> ${date}</p>
+    `;
+  </script>
+</body>
+</html>

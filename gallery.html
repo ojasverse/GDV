@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery|GDV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" />
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Navbar -->
+  <nav class="bg-red-600 text-yellow-300 p-4">
+    <div class="container mx-auto flex justify-between items-center flex-wrap">
+      <div class="flex items-center gap-4">
+        <img src="LOGO.jpg" alt="logo" class="w-14 rounded-full" />
+        <h1 class="text-xl font-bold">GYANDEEP VIDYALAYA</h1>
+      </div>
+      <button id="menu-btn" class="text-3xl md:hidden focus:outline-none">☰</button>
+      <ul class="hidden md:flex gap-6 text-lg mt-4 md:mt-0 w-full md:w-auto md:items-center md:justify-end">
+        <li><a href="index.html" class="hover:text-white block">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="registration.html" class="hover:text-white block">Registration</a></li>
+          <li><a href="gallery.html" class="hover:text-white block">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-white block">Contact</a></li>
+          <li><a href="login.html" class="hover:text-white block">ADMIN</a></li>
+      </ul>
+      <div id="mobile-menu" class="hidden w-full mt-4 md:hidden">
+        <ul class="flex flex-col gap-3 text-lg">
+          <li><a href="index.html" class="hover:text-white block">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="registration.html" class="hover:text-white block">Registration</a></li>
+          <li><a href="gallery.html" class="hover:text-white block">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-white block">Contact</a></li>
+          <li><a href="login.html" class="hover:text-white block">ADMIN</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gallery Section -->
+<section class="container mx-auto px-4 py-10">
+  <h2 class="text-3xl font-bold text-center text-red-700 mb-6">Gallery</h2>
+  <h3 class="text-xl font-semibold text-center text-gray-700 mb-8">Our Campus & Events</h3>
+
+  <!-- Filter Buttons -->
+  <div class="flex justify-center gap-4 mb-8">
+    <button class="filter-btn bg-red-600 text-white px-4 py-2 rounded" data-filter="all">All</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="sports">Sports</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="cultural">Events</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="annual">Annual Day</button>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="gallery">
+
+    <!-- Cultural: Republic Day -->
+    <div class="gallery-item" data-category="cultural">
+      <a href="republic day1.jpg" class="glightbox" data-gallery="events">
+        <img src="republic day1.jpg" alt="Republic Day" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Republic Day</p>
+    </div>
+    <div class="gallery-item" data-category="cultural">
+      <a href="republic day2.jpg" class="glightbox" data-gallery="events">
+        <img src="republic day2.jpg" alt="Republic Day" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Republic Day</p>
+    </div>
+    <div class="gallery-item" data-category="cultural">
+      <a href="republic day3.jpg" class="glightbox" data-gallery="events">
+        <img src="republic day3.jpg" alt="Republic Day" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Republic Day</p>
+    </div>
+
+    <!-- Cultural: Saraswati Puja -->
+    <div class="gallery-item" data-category="cultural">
+      <a href="saraswati puja1.jpg" class="glightbox" data-gallery="events">
+        <img src="saraswati puja1.jpg" alt="Saraswati Puja" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Saraswati Puja</p>
+    </div>
+    <div class="gallery-item" data-category="cultural">
+      <a href="saraswati puja2.jpg" class="glightbox" data-gallery="events">
+        <img src="saraswati puja2.jpg" alt="Saraswati Puja" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Saraswati Puja</p>
+    </div>
+
+    <!-- Sports: Children's Day -->
+    <div class="gallery-item" data-category="sports">
+      <a href="children's day.jpeg" class="glightbox" data-gallery="events">
+        <img src="children's day.jpeg" alt="Children's Day" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Children's Day</p>
+    </div>
+
+    <!-- Annual Day -->
+    <div class="gallery-item" data-category="annual">
+      <a href="chief guest.jpg" class="glightbox" data-gallery="events">
+        <img src="chief guest.jpg" alt="Annual Day" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Annual Day Chief Guest</p>
+    </div>
+
+    <!-- Sports: Medal Ceremony -->
+    <div class="gallery-item" data-category="sports">
+      <a href="prize.jpeg" class="glightbox" data-gallery="events">
+        <img src="prize.jpeg" alt="Sports Medal" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Sports Medal Ceremony</p>
+    </div>
+    <div class="gallery-item" data-category="sports">
+      <a href="prize1.jpeg" class="glightbox" data-gallery="events">
+        <img src="prize1.jpeg" alt="Sports Medal" class="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center mt-2 font-medium">Sports Medal Ceremony</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-red-700 text-white text-center py-4">
+    © 2025 Gyandeep Vidyalaya. All rights reserved.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({ selector: '.glightbox' });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        filterButtons.forEach(b => b.classList.remove('bg-red-600', 'text-white'));
+        btn.classList.add('bg-red-600', 'text-white');
+
+        galleryItems.forEach(item => {
+          const category = item.dataset.category;
+          if (filter === 'all' || category === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+
+</html>
